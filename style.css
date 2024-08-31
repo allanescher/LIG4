@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#game {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #444;
+}
+
+#board-container {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #0066cc;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 70px);
+    gap: 5px;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #b0b0b0;
+}
+
+.cell.red {
+    background-color: #ff4d4d;
+}
+
+.cell.black {
+    background-color: #333333;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#resetButton {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066cc;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#resetButton:hover {
+    background-color: #004c99;
+}
+
+#message {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.cell.winner {
+    position: relative;
+    background-color: #ffcc00;
+}
+
+.cell.winner::after {
+    content: "X";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
